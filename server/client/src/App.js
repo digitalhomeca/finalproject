@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import {Link} from 'react-router';
-import './App.css';
-import Navigation from './Navigation';
-import Footer from './Footer';
+// import './css/app.css';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 
 class App extends Component {

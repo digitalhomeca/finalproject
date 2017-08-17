@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import About from './About';
-import Contact from './Contact';
-import Home from './Home';
-import Blog from './Blog';
+import About from './components/About';
+import Contact from './components/Contact';
+import Home from './components/Home';
+import Blog from './components/Blog';
 
 import {Router,Route, IndexRoute, browserHistory} from 'react-router';
 

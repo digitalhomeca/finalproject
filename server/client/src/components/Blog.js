@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import moment from 'moment'
 
 class Blog extends Component {
     constructor(){
@@ -40,9 +41,12 @@ class Blog extends Component {
 
         let bloglist = this.state.blogposts.map((post,i) => {
             return <div key={post.index}>
-            <img src={post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url} />
             <h3> {post.title.rendered} </h3>
-            <p><strong>Date</strong> {post.date.substring(0,10)}</p>
+            <img src={post._embedded['wp:featuredmedia'][0].media_details.sizes['poseidon-thumbnail-large'].source_url}  />
+            {/* <img 
+            srcSet={post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url + ' 320w, ' + post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url + ' 1024w, ' + post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ' 1920w' } /> */}
+            
+            <p>Published:  {moment(post.date).format( "MMMM DD YYYY")} </p>
             <div dangerouslySetInnerHTML={ {__html: post.content.rendered} } /></div>
 
           });

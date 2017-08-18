@@ -8,6 +8,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Home from './components/Home';
 import Blog from './components/Blog';
+import Movies from './components/Movies';
 
 import {Router,Route, IndexRoute, browserHistory} from 'react-router';
 
@@ -17,6 +18,7 @@ ReactDOM.render(<Router history={browserHistory}>
             <Route path="/about" component={About} />
             <Route path="/blog" component={Blog}/>
             <Route path="/contact" component={Contact}/>
+            <Route path="/starwars" component={Movies}/>
     </Route>  
 </Router>, document.getElementById('root'));
 

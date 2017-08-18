@@ -5,13 +5,14 @@ function Navigation (props) {
     return (
         <div>
 
-          <nav className="light-teal lighten-1" role="navigation">
-          <div className="nav-wrapper container"><a id="logo-container" href="/" className="brand-logo">Logo</a>
+          <nav className="light-teal lighten-1">
+          <div className="nav-wrapper container"><a id="logo-container" href="/" className="brand-logo">Digital Home Canada</a>
           <ul className="right hide-on-med-and-down">
               <li><Link to = "/"> Home </Link></li>
               <li><Link to = "/about"> About Us </Link></li>
               <li><Link to = "/blog"> Blog </Link></li>
               <li><Link to = "/contact"> Contact Us </Link></li>
+              <li><Link to = "/starwars"> Star Wars </Link></li>
           </ul>
 
           <ul id="nav-mobile" className="side-nav">

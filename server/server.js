@@ -1,7 +1,6 @@
 const express = require('express'),
     app = express();
 
-// var cors = require('cors')
 
 const axios = require('axios');
 
@@ -25,7 +24,7 @@ app.listen(port, function () {
 });
 
 app.get('/posts', function (req, res) {
-    const promise = axios.get(url + '/posts')
+    const promise = axios.get(url + '/posts/?_embed')
         promise.then((result) => {
             res.json(result.data);
             console.log('received request');

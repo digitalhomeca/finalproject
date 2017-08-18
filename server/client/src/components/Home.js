@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 
 class Home extends Component {
     render() {
+      document.title = 'Digital Home';
         return (
             <div>   
 

@@ -8,10 +8,10 @@ class Home extends Component {
 
      <div id="index-banner" className="parallax-container">
             <div className="parallax">
-                <p> image here </p>
-                <img src='images/background1.jpg' alt="Unsplashed background img 1"/>
+                <p> home.js</p>
+                <img src='/images/ht1.jpg' alt="Unsplashed background img 1"/>
             </div>
-
+            {/* <img src='/images/ht1.jpg' alt="Unsplashed background img 1"/> */}
             <div className="section no-pad-bot">
 
                 <div className="container">

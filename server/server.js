@@ -1,11 +1,21 @@
 const express = require('express'),
     app = express();
 
+// var cors = require('cors')
+
 const axios = require('axios');
 
 const url = 'http://digitalhomecanada.com/blog/wp-json/wp/v2';
 
 var port = process.env.port || 8080;
+
+app.use((req, res, next)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
+    res.setHeader('Access-Control-Allow-Credentials', true)
+    next()
+})
 
 app.use(express.static(__dirname + '/public'));
 
@@ -18,6 +28,7 @@ app.get('/posts', function (req, res) {
     const promise = axios.get(url + '/posts')
         promise.then((result) => {
             res.json(result.data);
+            console.log('received request');
         })
         .catch((error) => {
             res.json(error);

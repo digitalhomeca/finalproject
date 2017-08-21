@@ -37,41 +37,42 @@ class Form extends Component {
     
   render() {
       document.title = "Contact Digital Home";
-      return (       
-          <div className="container">
+      return (  
 
-            <div className="row">
-              <div className="col s12 m10 l6">
-              <h4 className="ht-indent">Contact Us</h4>
-              <div className="divider"></div>
-              <p className="ht-indent">Thank-you for your interest in Digital Home.</p><p> For quick answers to all of your questions, please contact Hugh Thompson at (905) 919-0356. If the matter is not urgent, please use the contact form below and we will try to respond as soon as possible. </p>
-              </div>
-            
-            </div>
+      <div className="container">
+      {/* <h4 className='ht-indent'>Contact </h4> */}
+          <div className="row"> 
+          <div className="col s12 m12 l12 ">
+          {/* <div className="divider"></div>    */}
 
-            <div className="row">
+          <div className="row">
+          <div className="col m3 l4 left left-align">                   
+              <br /><img className='responsive-img' src='/images/contact.jpg' />
+              <p className="center-align">For the fastest response, please contact Hugh Thompson at (905) 919-0356.</p>
               
-            <form className="col s12 m10 l6">
-              <div className="divider"></div>
-              <h5 className="ht-indent">Form Submission</h5>
+          </div>
+          <div className="col s12 m9 l8 ">
+          <form className="col s12">
+              
+              <h5 className="center-align section">Tell us how to contact you</h5>
               <div className="divider"></div>
               <div className="row">
-                <div className="input-field col s12 m10 l6">
+                <div className="input-field col s12 m12 l6">
                   <br /><i className="material-icons prefix">account_circle</i>
                   <input name='firstName' type="text" className="validate" placeholder='First Name' value={this.state.firstName} onChange={e => {this.handleChange(e) }} />
                 </div>
-                <div className="input-field col s12 m10 l6">           
+                <div className="input-field col s12 m12 l6">           
                   <br /><i className="material-icons prefix">account_circle</i>
                   <input name='lastName' className="validate" placeholder='Last Name' value={this.state.lastName} onChange={e => {this.handleChange(e) }} />
                 </div>
               </div>
 
              <div className="row"> 
-                <div className="input-field col s12 m10 l6">
+                <div className="input-field col s12">
                   <i className="material-icons prefix">local_phone</i>
                   <input className="validate" name='phone' placeholder='Phone Number' value={this.state.phone} onChange={e => {this.handleChange(e) }} />
                 </div>
-                <div className="input-field col s12 m10 l6 ">
+                <div className="input-field col s12 ">
                   <i className="material-icons prefix">email</i>
                   <input className="validate" name='email' id='email' type='email'placeholder='Email Address' value={this.state.email} onChange={e => {this.handleChange(e) }} />
                   <label for="email" data-error="wrong" data-success="right"></label> 
@@ -79,7 +80,7 @@ class Form extends Component {
             </div>
 
             <div className="row"> 
-              <div className="input-field col s12 m10 l6">
+              <div className="input-field col s12">
                 <i className="material-icons prefix">mode_edit</i>
                 <textarea className="materialize-textarea" name='message' placeholder='Type your message here' value={this.state.message} onChange={e => {this.handleChange(e) }} />
               </div>
@@ -88,8 +89,14 @@ class Form extends Component {
             <button className="btn waves-light right" onClick={e => this.handleSubmit(e)} >Submit </button>
           </form>
 
-        </div>
-      </div>  
+         </div>
+          
+
+
+          </div>
+          </div>   
+          </div>
+      </div>
         
         )
   }

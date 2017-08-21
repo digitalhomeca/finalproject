@@ -20,6 +20,7 @@ componentDidMount() {
   }
 render() {
     document.title = "Movie Listing";
+    
   let movies = this.state.movies.map((movie, index) => {
     return <div key={index}>
     <div >
@@ -39,7 +40,7 @@ render() {
   });
 return (
     <div className="container">
-      <h4 > Movies</h4>
+      <h4 >Alternative Movies Blog</h4>
         <div className="row">  
           <div className="divider"></div>    
           <div className="col s12 m12 l12 "> {movies}</div>

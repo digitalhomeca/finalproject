@@ -9,7 +9,7 @@ function Footer (props) {
               <div className="row">
                 <div className="col l6 s12">
                   <h5 className="white-text">Digital Home</h5>
-                  <p className="grey-text text-lighten-4">A bunch of text saying mindless things will go here. Stuff that really doesn't make sense and no one reads.</p>
+                  <p className="grey-text text-lighten-4">This sample site was created by Hugh Thompson as a demonstration of combining the power of the React Javascript framework with the WordPress RESTful API. </p>
 
 
                 </div>

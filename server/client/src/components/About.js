@@ -3,21 +3,33 @@ class About extends Component {
     render() {
         document.title = "About Digital Home";
         return (
+            
             <div className="container">
-            <h4 className='ht-indent'>About Us</h4>
+            <h4 className='ht-indent'>About </h4>
                 <div className="row">  
                 <div className="col s12 m12 l12 ">
                 <div className="divider"></div>   
 
                 <div className="row">
                 <div className="col s12 m9 l8 ">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet mauris quis arcu bibendum sollicitudin. In pellentesque lacus eu odio faucibus, a vulputate elit dignissim. Quisque sed posuere nibh. Nunc sit amet hendrerit urna. Nulla iaculis rutrum nisl sit amet cursus. Maecenas varius, tellus non sagittis sagittis, dui purus semper quam, sed aliquam tellus elit vitae velit. Aliquam erat volutpat.</p>
+                <p>The purpose of this website is to provide visitors with a sample of a Single Page Application (SPA) written using the React Javascript library that connects to a headless content management system (CMS). The headless CMS, in our application, is the WordPress REST API.</p>
+                    
+                    <h5>SPA</h5>
+                    
+                    <p>A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a user experience similar to that of a desktop application. In an SPA, either all necessary code – HTML, JavaScript, and CSS – is retrieved with a single page load or the appropriate resources are dynamically loaded and added to the page as necessary, usually in response to user actions.</p>
+                    
+                    <h5>Headless CMS</h5>
+                    
+                    <p>A headless CMS is an excellent choice for organizations and developer who feel limited by the front-end restrictions of a standard CMS. Rich web apps, custom layouts, and JavaScript frameworks don't fit into the architecture of a CMS which exert significant control over how a website looks and operates. </p>
 
-                    <p>Sed accumsan mauris enim, at cursus lectus molestie tempus. In accumsan hendrerit nisl eu ornare. Etiam ornare eget arcu eu fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu augue, ultrices eget eros eget, sagittis facilisis quam. Quisque sollicitudin placerat urna sit amet efficitur. Pellentesque sed bibendum ipsum. Nam eget tellus purus. Phasellus in feugiat nisl. Sed vitae sem nec nunc dignissim elementum. Praesent tortor arcu, tincidunt sed leo et, laoreet sodales nibh. Donec viverra risus non mi vestibulum euismod. In convallis varius sem, non finibus urna.</p>
+                    <p>A headless CMS is an excellent choice for organizations and developer who feel limited by the front-end restrictions of a standard CMS. Rich web apps, custom layouts, and JavaScript frameworks don't fit into the architecture of a CMS which exert significant control over how a website looks and operates. </p>
+                    
+                    <p>The benefits of such a headless CMS extend beyond just websites. By delivering content via an API, a headless API can deliver content anywhere, to any device. This means the same backend can deliver content to a website, web application, iOS app, Android app, or any other medium.</p>
+                    
+                    <p>We believe a headless CMS is great for a cost-effective, quick to development and implement cross-platform publishing solution. It makes publishers, designers, and developers happy, who in turn will provide great products for their users.</p>
 
-                    <p>Aenean id efficitur nunc. Sed finibus arcu nibh, at euismod nulla pretium vitae. Vestibulum neque nibh, auctor pulvinar massa sed, condimentum convallis augue. Nulla sit amet enim luctus, molestie massa tempus, elementum nisi. Sed sit amet semper dui. Proin at lacus sodales, mollis mauris et, ullamcorper risus. Suspendisse ac nulla sagittis, cursus dui nec, sollicitudin lorem. Nulla viverra quam in vestibulum congue. Donec malesuada nunc vitae tristique aliquet. Vivamus euismod neque vitae pellentesque pellentesque. Cras tempus pretium eros, in tempus arcu feugiat eget. Praesent non sollicitudin purus. Mauris interdum quis nisl cursus porttitor. Etiam eget blandit mi, elementum efficitur nunc. Nullam vulputate tellus ac convallis sollicitudin. Curabitur enim nisl, consectetur eu sapien vel, vehicula tincidunt lacus.</p>
-                    <p>Aenean id efficitur nunc. Sed finibus arcu nibh, at euismod nulla pretium vitae. Vestibulum neque nibh, auctor pulvinar massa sed, condimentum convallis augue. Nulla sit amet enim luctus, molestie massa tempus, elementum nisi. Sed sit amet semper dui. Proin at lacus sodales, mollis mauris et, ullamcorper risus. Suspendisse ac nulla sagittis, cursus dui nec, sollicitudin lorem. Nulla viverra quam in vestibulum congue. Donec malesuada nunc vitae tristique aliquet. Vivamus euismod neque vitae pellentesque pellentesque. Cras tempus pretium eros, in tempus arcu feugiat eget. Praesent non sollicitudin purus. Mauris interdum quis nisl cursus porttitor. Etiam eget blandit mi, elementum efficitur nunc. Nullam vulputate tellus ac convallis sollicitudin. Curabitur enim nisl, consectetur eu sapien vel, vehicula tincidunt lacus.</p>
                 </div>
+
                 <div className="col m3 l4 right hide-on-med-and-down center-align">
                     <h5>Specializing in</h5>
                     <img className='responsive-img aboutImage' src='/images/cms.jpg' />

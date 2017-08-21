@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -18,7 +17,7 @@ ReactDOM.render(<Router history={browserHistory}>
             <Route path="/about" component={About} />
             <Route path="/blog" component={Blog}/>
             <Route path="/contact" component={Contact}/>
-            <Route path="/starwars" component={Movies}/>
+            <Route path="/movies" component={Movies}/>
     </Route>  
 </Router>, document.getElementById('root'));
 

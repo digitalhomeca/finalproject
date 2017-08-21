@@ -11,9 +11,6 @@ class Blog extends Component {
         }
         
     }
-
-    
-
     componentWillMount() {
         // const promise = axios.get('http://localhost:8080/posts')
         const promise = axios.get('http://digitalhomecanada.com/blog/wp-json/wp/v2/posts?_embed')
@@ -42,60 +39,29 @@ class Blog extends Component {
         let bloglist = this.state.blogposts.map((post,i) => {
             return <div key={post.index}>
             <h3> {post.title.rendered} </h3>
-            <img src={post._embedded['wp:featuredmedia'][0].media_details.sizes['poseidon-thumbnail-large'].source_url}  />
-            {/* <img 
-            srcSet={post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url + ' 320w, ' + post._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url + ' 1024w, ' + post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url + ' 1920w' } /> */}
-            
-            <p>Published:  {moment(post.date).format( "MMMM DD YYYY")} </p>
-            <div dangerouslySetInnerHTML={ {__html: post.content.rendered} } /></div>
+            <p>{moment(post.date).format( "MMMM DD YYYY")} </p>
+            <div className="card-image">
+                <img className='responsive-img' src={post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}  />
+                <span className="card-title flow-text" dangerouslySetInnerHTML={ {__html: post.excerpt.rendered} } />
+            </div>
+             
+            <div className="section flow-text" dangerouslySetInnerHTML={ {__html: post.content.rendered} } /></div>
 
           });
         return (
-            <div>
-              <h2>Blog</h2>
-              {bloglist}
+            <div className="container">
+            <h4 > Blog</h4>
+                <div className="row">  
+                <div className="divider"></div>    
+                <div className="col s12 m12 l12 "> {bloglist}</div>
+                    
+                </div>
+
             </div>
           )
         }
         }
         
-//         let bloglist = this.state.blogposts.map((post,i) => {
-//             return (
-//                 <Posts 
-//                     title={post.title.rendered}
-//                     story={post.content.rendered}
-//                     date={post.content.date}
-//                     />
-//             )
-//         })
-
-//         return (
-
-//             <div className='blist'>
-//                 <h2>Blog Posts</h2>
-//                 {bloglist}
-
-//             </div>
-//          )
-//     }
-// }
-
-
-// class Posts extends Component {
-//     render() {
-
-//         return (
-//             <div>
-//             <h2>{this.props.title}</h2>
-//             {this.props.story}
-//             <p>{this.props.date}</p>
-//             </div>
-//         )
-        
-
-
-//     }
-// }
 
 
 export default Blog;

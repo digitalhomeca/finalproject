@@ -19,20 +19,34 @@ componentDidMount() {
       })
   }
 render() {
-    document.title = "Contact Digital Home";
+    document.title = "Movie Listing";
   let movies = this.state.movies.map((movie, index) => {
     return <div key={index}>
-    <img src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url} />
-    <p><strong>Title:</strong> {movie.title.rendered}</p>
+    <div >
+    <h4 > {movie.title.rendered}</h4>
+    <img className='responsive-img' src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url} /> 
+    {/* <img src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url} 
+    srcSet={movie._embedded['wp:featuredmedia'][0].media_details.sizes['poseidon-thumbnail-large'].source_url } /> */}
+
+    </div>
     <p><strong>Release Year:</strong> {movie.acf.release_year}</p>
     <p><strong>Rating:</strong> {movie.acf.rating}</p>
-    <div><strong>Description:</strong><div dangerouslySetInnerHTML={ {__html: movie.acf.description} } /></div>
+
+    <div className="section flow-text"><div dangerouslySetInnerHTML={ {__html: movie.acf.description} } /></div>
+   
+    <div className="divider"></div>
     </div>
   });
 return (
-    <div>
-      <h2>Star Wars Movies</h2>
-      {movies}
+    <div className="container">
+      <h4 > Movies</h4>
+        <div className="row">  
+          <div className="divider"></div>    
+          <div className="col s12 m12 l12 "> {movies}</div>
+          {/* <div className="col s12 m12 l3"> stuff</div> */}
+            
+        </div>
+
     </div>
   )
 }

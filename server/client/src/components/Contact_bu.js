@@ -87,7 +87,6 @@ class Form extends Component {
             </div>    
               
             <button className="btn waves-light right" onClick={e => this.handleSubmit(e)} >Submit </button>
-
           </form>
 
          </div>

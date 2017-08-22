@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+
 function Navigation(props) {
     return (
         <div>
-
             <div className="navbar-fixed">
 
                 <nav className="blue darken-4" role="navigation">
@@ -23,6 +23,7 @@ function Navigation(props) {
                             <li><Link to="/about"> About </Link></li>
                             <li><Link to="/contact"> Contact </Link></li>
                             <li><Link to="/blog"> Blog </Link></li>
+
                             <li><Link to="/movies"> Movies </Link></li>
                         </ul>
 

@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
-// import {Link} from 'react-router';
-// import './css/app.css';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 
-
 class App extends Component {
 
+  // let random = "";
+  
+  //   componentdidmount(){
+  //     random = <Footer/>
+  //   }
+  
   render() {
     return (
       <div className="App">
         <Navigation />
         {this.props.children}
-        <Footer />
+  {/* random here instead of footer */}
+        <Footer /> 
       </div>
     );
   }

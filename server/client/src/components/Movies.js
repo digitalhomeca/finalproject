@@ -20,24 +20,42 @@ componentDidMount() {
   }
 render() {
     document.title = "Movie Listing";
+
+    let movies;
     
-  let movies = this.state.movies.map((movie, index) => {
-    return <div key={index}>
-    <div >
-    <h4 > {movie.title.rendered}</h4>
-    <img className='responsive-img' src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url} /> 
-    {/* <img src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url} 
-    srcSet={movie._embedded['wp:featuredmedia'][0].media_details.sizes['poseidon-thumbnail-large'].source_url } /> */}
+    if (this.state.movies.length > 0) {
+    
+        movies = this.state.movies.map((movie, index) => {
+          return <div key={index}>
+          <div >
+          <h4 > {movie.title.rendered}</h4>
+          <img className='responsive-img' src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url} /> 
+          {/* <img src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url} 
+          srcSet={movie._embedded['wp:featuredmedia'][0].media_details.sizes['poseidon-thumbnail-large'].source_url } /> */}
 
-    </div>
-    <p><strong>Release Year:</strong> {movie.acf.release_year}</p>
-    <p><strong>Rating:</strong> {movie.acf.rating}</p>
+          </div>
+          <p><strong>Release Year:</strong> {movie.acf.release_year}</p>
+          <p><strong>Rating:</strong> {movie.acf.rating}</p>
 
-    <div className="section flow-text"><div dangerouslySetInnerHTML={ {__html: movie.acf.description} } /></div>
-   
-    <div className="divider"></div>
-    </div>
-  });
+          <div className="section flow-text"><div dangerouslySetInnerHTML={ {__html: movie.acf.description} } /></div>
+        
+          <div className="divider"></div>
+          </div>
+        });
+      } else {
+        movies = 
+        <div className="ht-indent preloader-wrapper big active">
+        <div className="spinner-layer spinner-blue-only">
+          <div className="circle-clipper left">
+            <div className="circle"></div>
+          </div><div className="gap-patch">
+            <div className="circle"></div>
+          </div><div className="circle-clipper right">
+            <div className="circle"></div>
+          </div>
+        </div>
+      </div>
+      }
 return (
     <div className="container">
       <h4 >Alternative Movies Blog</h4>

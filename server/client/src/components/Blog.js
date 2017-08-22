@@ -27,33 +27,53 @@ class Blog extends Component {
           this.setState({
             showError: true
         });
-    })
-
-    
+    })   
 }
 
     render() {
-
         document.title = "Digital Home Blog";
 
-        let bloglist = this.state.blogposts.map((post,i) => {
-            return <div key={post.index}>
-            <h3> {post.title.rendered} </h3>
-            <p>{moment(post.date).format( "MMMM DD YYYY")} </p>
-            <div>
-                <img className='responsive-img' src={post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}  />
-                {/* <span className="card-title flow-text" dangerouslySetInnerHTML={ {__html: post.excerpt.rendered} } /> */}
-            </div>
-             
-            <div className="section flow-text" dangerouslySetInnerHTML={ {__html: post.content.rendered} } /></div>
+        let bloglist;
 
-          });
+        if (this.state.blogposts.length > 0) {
+
+             bloglist = this.state.blogposts.map((post,i) => {
+                return <div key={post.index}>
+                <h3> {post.title.rendered} </h3>
+                <p>{moment(post.date).format( "MMMM DD YYYY")} </p>
+                <div>
+                    <img className='responsive-img' src={post._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url}  />
+                </div>
+                <div className="section flow-text" dangerouslySetInnerHTML={ {__html: post.content.rendered} } /></div>
+            }); 
+
+         } else {
+              
+            bloglist = 
+            <div className="ht-indent preloader-wrapper big active">
+            <div className="spinner-layer spinner-blue-only">
+              <div className="circle-clipper left">
+                <div className="circle"></div>
+              </div><div className="gap-patch">
+                <div className="circle"></div>
+              </div><div className="circle-clipper right">
+                <div className="circle"></div>
+              </div>
+            </div>
+          </div>
+        }
+
+
+
+
         return (
             <div className="container">
             <h4 >The CMS Blog</h4>
                 <div className="row">  
                 <div className="divider"></div>    
-                <div className="col s12 m12 l12 "> {bloglist}</div>
+                    <div className="col s12 m12 l12 "> 
+                        {bloglist}
+                    </div>
                     
                 </div>
 

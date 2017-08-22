@@ -11,7 +11,12 @@ import Movies from './components/Movies';
 
 import {Router,Route, IndexRoute, browserHistory} from 'react-router';
 
-ReactDOM.render(<Router history={browserHistory}>
+
+function scrollToTop() {
+    window.scrollTo(0, 0)
+
+}
+ReactDOM.render(<Router onUpdate={scrollToTop} history={browserHistory}>
     <Route path="/" component={App} >  
         <IndexRoute component={Home} />
             <Route path="/about" component={About} />

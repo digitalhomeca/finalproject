@@ -30,9 +30,6 @@ class Movies extends Component {
           <div >
             <h4 > {movie.title.rendered}</h4>
             <img className='responsive-img' src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url} />
-            {/* <img src={movie._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url} 
-          srcSet={movie._embedded['wp:featuredmedia'][0].media_details.sizes['poseidon-thumbnail-large'].source_url } /> */}
-
           </div>
           <p><strong>Release Year:</strong> {movie.acf.release_year}</p>
           <p><strong>Rating:</strong> {movie.acf.rating}</p>
@@ -65,7 +62,6 @@ class Movies extends Component {
         <div className="row">
           <div className="divider"></div>
           <div className="col s12 m12 l12 "> {movies}</div>
-          {/* <div className="col s12 m12 l3"> stuff</div> */}
 
         </div>
 

@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-// import $ from 'jquery';
-// import {sideNav} from 'materialize-css';
 
 function Navigation(props) {
     return (
-
         <div>
 
             <div className="navbar-fixed">
@@ -21,7 +18,7 @@ function Navigation(props) {
                             <li><Link to="/movies"> Movies </Link></li>
                         </ul>
 
-                        <ul id="nav-mobile side-nav">
+                        <ul id="nav-mobile" className="side-nav">
                             <li><Link to="/"> Home </Link></li>
                             <li><Link to="/about"> About </Link></li>
                             <li><Link to="/contact"> Contact </Link></li>
@@ -30,7 +27,6 @@ function Navigation(props) {
                         </ul>
 
                         <Link to="/" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></Link>
-
                     </div>
                 </nav>
             </div>
@@ -38,9 +34,5 @@ function Navigation(props) {
     )
 }
 
-// $( document ).ready(function(){
-//     $(".button-collapse").sideNav();
-
-// }) 
 export default Navigation;
 

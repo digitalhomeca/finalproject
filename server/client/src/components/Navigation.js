@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-
+import $ from 'jquery'
 function Navigation(props) {
     return (
         <div>
@@ -27,13 +27,17 @@ function Navigation(props) {
                         </ul>
 
                         <Link to="/" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></Link>
-                        {/* $(".button-collapse").sideNav();  //neded this jquery */}
                     </div>
                 </nav>
             </div>
         </div>
     )
 }
+
+$(document).ready(function(){
+    $(".button-collapse").sideNav();  //neded this jquery 
+
+})
 
 export default Navigation;
 

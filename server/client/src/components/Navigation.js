@@ -21,7 +21,7 @@ function Navigation(props) {
                             <li><Link to="/movies"> Movies </Link></li>
                         </ul>
 
-                        <ul id="nav-mobile">
+                        <ul id="nav-mobile side-nav">
                             <li><Link to="/"> Home </Link></li>
                             <li><Link to="/about"> About </Link></li>
                             <li><Link to="/contact"> Contact </Link></li>

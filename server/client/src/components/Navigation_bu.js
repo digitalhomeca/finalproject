@@ -27,7 +27,6 @@ function Navigation(props) {
                         </ul>
 
                         <Link to="/" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></Link>
-                        {/* $(".button-collapse").sideNav();  //neded this jquery */}
                     </div>
                 </nav>
             </div>

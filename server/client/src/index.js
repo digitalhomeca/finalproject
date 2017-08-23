@@ -14,6 +14,9 @@ import {Router,Route, IndexRoute, browserHistory} from 'react-router';
 
 function scrollToTop() {
     window.scrollTo(0, 0)
+    if ('scrollRestoration' in browserHistory) {
+        browserHistory.scrollRestoration = 'manual';
+    }
 
 }
 ReactDOM.render(<Router onUpdate={scrollToTop} history={browserHistory}>

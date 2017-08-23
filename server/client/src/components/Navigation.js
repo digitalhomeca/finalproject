@@ -9,24 +9,14 @@ function Navigation(props) {
 
                 <nav className="blue darken-4" role="navigation">
                     <div className="nav-wrapper container">
-                        <Link to="/" id="logo-container" className="brand-logo"> Digital Home</Link>
-                        <ul className="right hide-on-med-and-down">
-                            <li><Link to="/about"> About</Link></li>
-                            <li><Link to="/contact"> Contact </Link></li>
-                            <li><Link to="/blog"> Blog </Link></li>
-
-                            <li><Link to="/movies"> Movies </Link></li>
-                        </ul>
-
-                        <ul id="nav-mobile" className="side-nav">
-                            <li><Link to="/"> Home </Link></li>
-                            <li><Link to="/about"> About </Link></li>
-                            <li><Link to="/contact"> Contact </Link></li>
+                        <Link to="/" id="logo-container" className="brand-logo left"> Digital Home</Link>
+                        <ul className="right">
+                            <li className="hide-on-med-and-down"><Link to="/about"> About</Link></li>
+                            <li className="hide-on-med-and-down"><Link to="/contact"> Contact </Link></li>
                             <li><Link to="/blog"> Blog </Link></li>
                             <li><Link to="/movies"> Movies </Link></li>
                         </ul>
 
-                        <Link to="/" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></Link>
                     </div>
                 </nav>
             </div>

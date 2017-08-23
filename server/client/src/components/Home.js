@@ -48,7 +48,7 @@ class Home extends Component {
             <div className="row">
               <div className="col s12 m6 l6">
                 <div className="icon-block">
-                  {/* <h2 className="center "><i className="material-icons">flash_on</i></h2> */}
+                  <h2 className="center"><i className="material-icons">computer</i></h2>
                   <h5 className="center">Joomla</h5>
 
                   <p className="light">Joomla is a free and open-source content management system (CMS) written in PHP which began in 2001 as Mambo. As of November 2016, Joomla! has been downloaded over 81 million times. Joomla includes features such as page caching, RSS feeds, printable versions of pages, news flashes, blogs, search, and support for language internationalization.
@@ -58,7 +58,7 @@ class Home extends Component {
 
               <div className="col s12 m6 l6">
                 <div className="icon-block">
-                  {/* <h2 className="center brown-text"><i className="material-icons">flash_on</i></h2> */}
+                  <h2 className="center"><i className="material-icons">computer</i></h2>
                   <h5 className="center">WordPress</h5>
 
                   <p className="light">First released in May 2003, WordPress is a free and open-source blogging system based on PHP and MySQL. Since its inception, WordPress has been updated over thirty times and is currently on version 4.9. WordPress is reportedly the most popular content management system on the Web, supporting more than 60 million websites.</p>

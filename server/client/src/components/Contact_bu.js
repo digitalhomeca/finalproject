@@ -23,9 +23,9 @@ class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    var notice = document.getElementById('mymodal');
-    notice.style.display = "block";
-
+    console.log('form: ', this.state);
+    alert('Thank-you ' + this.state.firstName + 'for your interest. Please note this is only a demo and your contact information was not taken.');
+    // IF SUBMITTING TO A PARENT Component then would --- this.props.onSubmit(this.state)--- where onSubmit is the parent function handed down OR could post to a database
     this.setState({
       firstName: "",
       lastName: "",
@@ -35,19 +35,11 @@ class Form extends Component {
     });
   };
 
-  handleModal = e => {
-    var notice = document.getElementById('mymodal');
-    notice.style.display = "none";
-  };
-
-
-
   render() {
     document.title = "Contact Digital Home";
     return (
 
       <div className="container">
-
         {/* <h4 className='ht-indent'>Contact </h4> */}
         <div className="row">
           <div className="col s12 m12 l12 ">
@@ -97,19 +89,6 @@ class Form extends Component {
                   <button className="btn waves-light right" onClick={e => this.handleSubmit(e)} >Submit </button>
 
                 </form>
-                <div id="mymodal" className="modal" onClick={e => this.handleModal(e)}>
-                  <div className="modal-content">
-                    <h4>Thank-you for your interest.</h4>
-                    <h6> This website is for demonstration purposes only.</h6>
-                    <h6> 
-                    To learn more please contact Hugh Thompson directly at (905) 905-0356</h6>
-                    
-                  </div>
-                  <div className="modal-footer">
-                    <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat"  >Close</a>
-                  </div>
-
-                </div>
 
               </div>
 
@@ -118,7 +97,6 @@ class Form extends Component {
             </div>
           </div>
         </div>
-
       </div>
 
     )

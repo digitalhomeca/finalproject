@@ -13,7 +13,7 @@ function Navigation(props) {
                         <ul className="right">
                             <li className="hide-on-med-and-down"><Link to="/about"> About</Link></li>
                             <li className="hide-on-med-and-down"><Link to="/contact"> Contact </Link></li>
-                            <li><Link to="/blog"> Blog </Link></li>
+                            <li><Link to="/wp"> Blog </Link></li>
                             <li><Link to="/movies"> Movies </Link></li>
                         </ul>
 

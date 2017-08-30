@@ -23,7 +23,7 @@ ReactDOM.render(<Router onUpdate={scrollToTop} history={browserHistory}>
     <Route path="/" component={App} >  
         <IndexRoute component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/blog" component={Blog}/>
+            <Route path="/wp" component={Blog}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/movies" component={Movies}/>
     </Route>  

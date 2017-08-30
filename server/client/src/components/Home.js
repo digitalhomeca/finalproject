@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-
-
-
 class Home extends Component {
-
   render() {
     document.title = 'Digital Home';
-
     return (
       <div className="container">
 
@@ -23,7 +18,7 @@ class Home extends Component {
                 <h5 className="header col s12">Content Management Systems Yesterday and Today</h5>
               </div>
               <div className="row center">
-                <Link to="/blog" id="download-button" className="btn-large waves-effect waves-light teal darken-1 white-text"> Introducing the Headless CMS </Link>
+                <Link to="/wp" id="download-button" className="btn-large waves-effect waves-light teal darken-1 white-text"> Introducing the Headless CMS </Link>
               </div>
 
 
